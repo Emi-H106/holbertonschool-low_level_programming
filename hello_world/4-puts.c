@@ -4,7 +4,7 @@
  * main - the entry point of a C program
  *
  *
- * Return: Always 0.
+ * Return: Always 0.(Success)
  */
 
 
