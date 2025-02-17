@@ -8,18 +8,18 @@
 
 int main(void)
 {
-	char alphabet;
+	char alphabet, ALPHABET;
 
 	for (alphabet = 'a' ; alphabet <= 'z' ; alphabet++)
 	{
 		putchar(alphabet);
 	}
 
-	for (alphabet = 'A' ; alphabet <= 'Z' ; alphabet++)
+	for (ALPHABET = 'A' ; ALPHABET <= 'Z' ; ALPHABET++)
 	{
 		putchar(alphabet);
 	}
 
-	putchar(alphabet);
+	putchar(ALPHABET);
 	return (0);
 }
