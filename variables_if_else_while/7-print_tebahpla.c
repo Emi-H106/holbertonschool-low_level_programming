@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <ctype.h>
 
 /**
  * main - Entry point
@@ -9,12 +8,13 @@
 
 int main(void)
 {
-	char c;
+	char c = 'z';
 
-	for (c = 48; c <= 57; c++)
+	for (c = 'z'; c >= 'a'; c--)
 	{
 		putchar(c);
 	}
+
 	putchar('\n');
 	return (0);
 }
