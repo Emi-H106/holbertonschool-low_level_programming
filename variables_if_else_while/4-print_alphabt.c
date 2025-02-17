@@ -10,24 +10,16 @@ int main(void)
 {
 	char alphabet;
 
-	while (alphabet <= 'z')
+	for (alphabet = 'a' ; alphabet <= 'z' ; alphabet++ )
 	{
-		alphabet++;
-
-		if (alphabet = 'e')
+		if ( alphabet == 'e' || alphabet == 'q')
 		{
-			break;
-		}
-		else if (alphabet = 'q')
-		{
-			break;
-		}
+			continue;
+			putchar(alphabet);
 
+		}
 	}
-	
 
-	putchar('\n');
-	return (0);
-
-}	
-	
+	putchar ('\n');
+	return(0);
+}
