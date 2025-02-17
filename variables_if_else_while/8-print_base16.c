@@ -8,12 +8,13 @@
 
 int main(void)
 {
-	char c;
+	int num;
 
-	for (c = 48; c <= 57; c++)
+	for (num = 0; num <= 15; num++)
 	{
-		putchar(c);
+		printf("%x", num);
 	}
+
 	putchar('\n');
 	return (0);
 }
