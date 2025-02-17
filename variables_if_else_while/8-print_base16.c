@@ -9,10 +9,16 @@
 int main(void)
 {
 	int num;
+	char c;
 
-	for (num = 0; num <= 15; num++)
+	for (num = 0; num <= 9; num++)
 	{
-		printf("%x", num);
+		putchar(num);
+	}
+
+	for (c = 'a'; c <= 'f'; c++)
+	{
+		putchar(c);
 	}
 
 	putchar('\n');
