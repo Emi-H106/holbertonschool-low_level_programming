@@ -11,13 +11,17 @@
 
 int main(void);
 {
-	char c;
-
-	for (c = 'a'; c =< 'z'; c++);
+	void print_alphabet(void);
 	{
-		_putchar(c);
-	}
+		char c;
 
-	_putchar('\n');
-	return (0);
+		for (c = 'a'; c =< 'z'; c++)
+		{
+			_putchar(c);
+		}
+
+		_putchar('\n');
+		return (0);
+	}
 }
+
