@@ -11,8 +11,6 @@
 
 
 void print_alphabet(void);
-
-int main(void)
 {
 	char c;
 
@@ -22,5 +20,4 @@ int main(void)
 	}
 
 	_putchar('\n');
-	return (0);
 }
