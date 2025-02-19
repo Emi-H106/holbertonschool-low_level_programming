@@ -2,14 +2,13 @@
 
 /**
  * times_table - prints the 9 times table, starting with 0
- *
+ * @i: int type
  * Return: void
  */
 
 void times_table(void)
 {
 	int i;
-	int j = i * 9;
 
 	for (i = 0; i <= 9; i++)
 	{
@@ -24,15 +23,15 @@ void times_table(void)
 		_putchar((i * 8) + '0');
 		_putchar((i * 9) + '0');
 
-			if (j / 9 == 9)
+			if ((i * 9) / 9 == 9)
 			{
-				_putchar(' ');
-				_putchar(',');
+				_putchar('\n');
 			}
 
 			else
 			{
-				_putchar('\n');
+				_putchar(' ');
+				_putchar(',');
 			}
 	}
 }
