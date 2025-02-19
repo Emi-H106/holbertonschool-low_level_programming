@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * jack_bauer - prints every minute of the day 
- * @hour : hour / @minute : minute
+ * jack_bauer - prints every minute of the day
+ * @hour: hour / @minute: minute
  * Return: void
  */
 
