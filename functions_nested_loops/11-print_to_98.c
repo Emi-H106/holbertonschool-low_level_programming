@@ -10,7 +10,7 @@
 
 void print_to_98(int n)
 {
-	for (n = 0; n <= 98; n++ || n = 0;n < 98; n--)
+	for (n = 0; n <= 98; n++ || n = 0; n < 0; n--)
 
 		if (-10 < n < 10)
 		{
