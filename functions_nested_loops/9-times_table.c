@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * times_table - prints the 9 times table, starting with 0
- * @i: number1, @j: number2
+ * times_table - prints the times table
  * Return: void
  */
 
@@ -15,27 +14,18 @@ void times_table(void)
 		for (j = 0; j <= 9; j++)
 		{
 			 k = i * j;
-			
-			if (k < 10)
-			{
-				_putchar(k + '0');
-			
-				 if (j > 0)  
-				{
-				_putchar(',');
+
+			if (k < 10 && j > 0)
 				_putchar(' ');
-				_putchar(' ');
-				}
-			}	 
-			else
-			{
-				_putchar(',');
-				_putchar(' ');
+			if (k >= 10)
 				_putchar(k / 10 + '0');
-				_putchar(k % 10 + '0');
+			_putchar(k % 10 + '0');
+			if (j < 9)
+			{
+				_putchar(',');
+				_putchar(' ');
 			}
 		}
 		_putchar('\n');
 	}
 }
-
