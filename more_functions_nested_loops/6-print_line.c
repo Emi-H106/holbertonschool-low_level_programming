@@ -8,16 +8,19 @@
 
 void print_line(int n)
 {
-	for (n = 0; n >= 1; n++)
+	int a = 0;
+
+	if (n > 0)
 	{
-		if (n == 0 && n < 0)
-		{
-			_putchar('\n');
-		}
-		else if (n > 0)
+		while (a <= n)
 		{
 			_putchar('_');
+			a++;
 		}
+	else
+	{
+		_putchar('\n');
 	}
+
 	_putchar('\n');
 }
