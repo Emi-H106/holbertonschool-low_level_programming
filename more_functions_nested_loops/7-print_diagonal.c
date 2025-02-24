@@ -15,9 +15,9 @@ void print_diagonal(int n)
 	{
 		while (a <= n)
 		{
-			 _putchar('92');
+			 _putchar(92);
 			 _putchar('\n');
-			 _putch('32');
+			 _putchar(32);
 			 a++;
 		}
 	}
