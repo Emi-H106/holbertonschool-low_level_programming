@@ -10,25 +10,28 @@ int main()
 {
 	int n;
 
-	for (n = 2; n <= 100; n++)
+	for (n = 1; n <= 100; n++)
 	{
 		if (n == 1)
 		{
 			printf("1");
 		}
-		if (n % 3 == 0)
+		else if (n % 3 == 0)
 		{
 			printf(" Fizz");
 		}
-		if (n % 5 == 0)
+		else if (n % 5 == 0)
 		{
 			printf(" Buzz");
 		}
-		if (n % 15 == 0)
+		else if (n % 15 == 0)
 		{
 			printf(" FizzBuzz");
 		}
+		else
+		{
 		printf(" %d", n);
+		}
 	}
 	return (0);
 }
