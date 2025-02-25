@@ -14,7 +14,7 @@ int main(void)
 	{
 		if (n == 1)
 		{
-			printf("%d");
+			printf("1");
 		}
 		if (n % 3 == 0)
 		{
