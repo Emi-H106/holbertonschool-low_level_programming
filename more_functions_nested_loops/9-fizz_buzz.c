@@ -6,9 +6,8 @@
  * Return: Always 0 (Success)
  */
 
-int main(void)
+int main(int n)
 {
-	int n;
 
 	for (n = 1; n <= 100; n++)
 	{
