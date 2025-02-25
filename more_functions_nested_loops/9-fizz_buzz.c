@@ -6,8 +6,9 @@
  * Return: Always 0 (Success)
  */
 
-int main(int n)
+int main()
 {
+	int n;
 
 	for (n = 1; n <= 100; n++)
 	{
@@ -29,4 +30,5 @@ int main(int n)
 		}
 		printf(" %d", n);
 	}
+	return (0);
 }
