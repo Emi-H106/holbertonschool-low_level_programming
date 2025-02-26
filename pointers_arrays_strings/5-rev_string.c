@@ -2,15 +2,14 @@
 
 
 /**
- * print_rev - prints a string in reverse
+ * rev_string - reverses a string
  * @s: a string
  * Return: void
  */
 
-void print_rev(char *s)
+void rev_string(char *s)
 {
 	char *end = s;
-
 	while (*end != '\0')
 	{
 		end++;
@@ -19,9 +18,6 @@ void print_rev(char *s)
 
 	while (end >= s)
 	{
-		_putchar(*end);
 		end--;
 	}
-
-	_putchar('\n');
 }
