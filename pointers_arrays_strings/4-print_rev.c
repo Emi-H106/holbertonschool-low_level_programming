@@ -9,21 +9,22 @@
 
 void print_rev(char *s)
 {
-	char *end = s, temp;
+	char *start = s;
+	char *end = s;
 
-	while (*end)
+	while (*end != '\0')
 	{
 		end++;
 	}
 	end--;
 
-	while (s < end)
+	while (start < end)
 	{
-		temp = *s;
-		*s = *end;
+		char temp = *start;
+		*start = *end;
 		*end = temp;
 
-		s++;
+		start++;
 		end--;
 	}
 }
