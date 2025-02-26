@@ -22,6 +22,7 @@ void print_rev(char *s)
 		temp = *s;
 		*s = *end;
 		*end = temp;
+
 		s++;
 		end--;
 	}
