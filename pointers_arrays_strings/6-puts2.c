@@ -12,9 +12,9 @@ void puts2(char *str)
 	int i;
 	char *end = str;
 
-	while (str[i] != '\0')
+	while (*end != '\0')
 	{
-		i++;
+		end++;
 	}
 
 	for (i = 0; str < end; i += 2)
