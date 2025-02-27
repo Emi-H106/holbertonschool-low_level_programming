@@ -20,9 +20,6 @@ void rev_string(char *s)
 
 	while (end > s)
 	{
-		//tmp = *s;
-		//*s = *end;
-		//*end = tmp;
 		end--;
 	}
 }
