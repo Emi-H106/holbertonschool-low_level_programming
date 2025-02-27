@@ -9,14 +9,20 @@
 
 void rev_string(char *s)
 {
-	char *end;
-	char tmp = *s;
+	char *end = s;
+	char tmp;
+
+	while (*end != '\0')
+	{
+		end++;
+	}
 
 	while (s < end)
 	{
+		tmp = *s;
 		*s = *end;
 		*end = tmp;
 		s++;
-		end--;
 	}
+	end--;
 }
