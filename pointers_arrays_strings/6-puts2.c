@@ -22,7 +22,7 @@ void puts2(char *str)
 	for (i = 0; start < end; i += 2)
 	{
 		_putchar(str[i]);
-		i++;
+		start[i/2]=str[i];
 	}
 	_putchar('\n');
 }
