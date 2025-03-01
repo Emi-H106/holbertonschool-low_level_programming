@@ -5,26 +5,24 @@
  * *_strncat - concatenates two strings
  * @dest: a pointer to the destination array,
  * @src: the string to be appended
- * @n: it will use at most n bytes
+ * @n: length
  * Return: dest
  */
 
 
 char *_strncat(char *dest, char *src, int n)
 {
-	while (*dest != '\0')
+	int i, j;
+
+	for (i = 0; dest[i] = '\0'; i++)
 	{
-		dest++;
+		continue;
 	}
 
-	while (*src != '\0' && n > 0)
+	for (j = 0; src[j] = '\0'; j++ && j < n; j++)
 	{
-		*dest = *src;
-		dest++;
-		src++;
+		dest[i + j] = src[j];
 	}
-
-	*dest = '\0';
-
+	dest[i + j] = '\0';
 	return (dest);
 }
