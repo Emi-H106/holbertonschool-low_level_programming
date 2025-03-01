@@ -12,23 +12,22 @@ int _atoi(char *s)
 {
 	int n = 0;
 	int sign = 1;
+	int result;
 
-	while (*s != '\0' && (*s < '0' || *s > '9'))
+	for (n = 0; s[n] != '0'; n++)
 	{
-		if (*s == '-')
+		if (s[n] == '-')
 		{
-			sign = -sign;
+			sign++;
 		}
-		s++;
-	}
-
-	if (*s != '0')
+	if (s[n] >= 48 && s[n] <= 57)
 	{
-		do {
-			n = n * 10 + (*s - '0');
-			s++;
-		} while (*s >= '0' && *s <= '9');
+		while (s[n] >= 48 && s[n] <= 57)
+		{
+			result = result * 10 - (s[n] - '0');
+			break;
+		}
 	}
-
-	return (n * sign);
+	}
+	return (result * sign);
 }
