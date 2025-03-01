@@ -5,7 +5,7 @@
  * *_strcat - concatenates two strings
  * @dest: a pointer to the destination array
  * @src: the string to be appended
- * Return: dest (=temp)
+ * Return: dest
  */
 
 
@@ -28,5 +28,7 @@ char *_strcat(char *dest, char *src)
 	}
 
 	*temp = '\0';
-	return (temp);
+	temp = dest;
+
+	return (dest);
 }
