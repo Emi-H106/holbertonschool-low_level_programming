@@ -11,19 +11,26 @@
 int _atoi(char *s)
 {
 	int n = 0;
+	int sign = 1;
 
-	while (n != '\0')
+	while (*s != '\0' && (*s < '0' || *s > '9'))
 	{
-		s[n++];
+		if (*s == '-')
+		{
+			sign = -sign;
+		}
+		s++
 	}
 
-		if (n >= 48 && n <= 57)
+	if (*s != '0')
+	{
+		do
 		{
-			_putchar(s[n] + '0');
+			n = n * 10 + (*s - '0');
+			s++;
 		}
-		else
-		{
-			return (0);
-		}
-	_putchar('\n');
+		while (*s >= '0' && *s <= '9');
+	}
+
+	return n * sign;
 }
