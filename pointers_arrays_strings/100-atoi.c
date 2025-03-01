@@ -14,7 +14,7 @@ int _atoi(char *s)
 
 	while (n != '\0')
 	{
-		s[(n++)];
+		s[n++];
 	}
 
 		if (n >= 48 && n <= 57)
