@@ -10,7 +10,7 @@
 char *cap_string(char *str)
 {
 	int i = 0;
-	int n;
+	int capitalize_first = 1;
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -18,7 +18,22 @@ char *cap_string(char *str)
 		str[i] == '!' || str[i] == '?' || str[i] == '(' || str[i] == ')' ||
 		str[i] == '{' || str[i] == '}')
 		{
-			n = 1;
+			capitalize_first = 1;
 		}
-
-
+		else if (capitalize_first)
+		{
+			if (str[i] => 'a' && str[i] <= 'z')
+			{
+				str[i] = str[i] - 32;
+			}
+			capitalize_first = 0;
+		else
+		{
+			if (str[i] => 'A' && str[i] <= 'Z')
+			{
+				str[i] = str[i] + 32;
+			}
+		}
+	}
+		return (str);
+}
