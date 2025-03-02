@@ -16,11 +16,11 @@
 	
 	for (i = 0; str[i] != '\0', i++)
 	{
-		for (j = 0, alphabet[j] != '!0', j++)
+		for (j = 0, j < 10, j++)
 		{
 			if (str[i] == alphabet[j])
 			{
-				str[i] = number(j);
+				str[i] = number[j];
 			}
 		}
 	}
