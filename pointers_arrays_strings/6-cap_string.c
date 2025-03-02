@@ -9,16 +9,16 @@
 
 char *cap_string(char *str)
 {
-	char *a = str;
 	int i = 0;
+	int n;
 
-	while (*a == '\0')
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (a[i - 1] == 32 && a[i] >= 97 && a[i] <= 122)
+		if (str[i] == ' ' || str[i] == ','|| str[i] == ';' || str[i] == '.' ||
+		str[i] == '!' || str[i] == '?' || str[i] == '(' || str[i] == ')' ||
+		str[i] == '{' || str[i] == '}')
 		{
-			*a = *a - 32;
+			n = 1;
 		}
-		a++;
-	}
-	return (str);
-}
+
+
