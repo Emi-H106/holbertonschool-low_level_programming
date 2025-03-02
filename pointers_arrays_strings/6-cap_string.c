@@ -22,14 +22,14 @@ char *cap_string(char *str)
 		}
 		else if (capitalize_first)
 		{
-			if (str[i] => 'a' && str[i] <= 'z')
+			if (str[i] >= 'a' && str[i] <= 'z')
 			{
 				str[i] = str[i] - 32;
 			}
 			capitalize_first = 0;
 		else
 		{
-			if (str[i] => 'A' && str[i] <= 'Z')
+			if (str[i] >= 'A' && str[i] <= 'Z')
 			{
 				str[i] = str[i] + 32;
 			}
