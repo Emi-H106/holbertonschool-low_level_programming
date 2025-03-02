@@ -16,13 +16,13 @@
 	
 	for (i = 0; str[i] != '\0', i++)
 	{
-		for (j = 0, alphabet[j], j++)
+		for (j = 0, alphabet[j] != '!0', j++)
 		{
 			if (str[i] == alphabet[j])
 			{
 				str[i] = number(j);
-				break;
 			}
+		}
 	}
 	return (str);
 }
