@@ -28,13 +28,6 @@ char *cap_string(char *str)
 			}
 			capitalize_first = 0;
 		}
-		else
-		{
-			if (str[i] >= 'A' && str[i] <= 'Z')
-			{
-				str[i] = str[i] + 32;
-			}
-		}
 	}
 		return (str);
 }
