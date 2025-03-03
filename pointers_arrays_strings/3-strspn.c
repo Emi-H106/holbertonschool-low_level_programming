@@ -13,25 +13,22 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int count = 0;
-	char *tmp;
 
 	while (*s)
 	{
-		*tmp = accept;
-
-		while (*tmp)
+		while (*accept)
 		{
-			if (*s == *tmp)
+			if (*s == *accept)
 			{
 				count++;
 				break;
 			}
-			tmp++;
+		accept++;
 		}
 
-		if (!*tmp)
+		if (!*accept)
 		{
-			break
+			break;
 		}
 		s++;
 	}
