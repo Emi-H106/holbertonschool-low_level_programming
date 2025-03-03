@@ -22,6 +22,7 @@ unsigned int _strspn(char *s, char *accept)
 			if (accept[j] == s[i])
 			{
 				same_caracter = 1;
+				break;
 			}
 		}
 
