@@ -25,9 +25,8 @@ unsigned int _strspn(char *s, char *accept)
 			}
 		}
 
-		if (accept[j] != s[i])
+		if (same_caracter == 0)
 		{
-			same_caracter = 0;
 			break;
 		}
 	}
