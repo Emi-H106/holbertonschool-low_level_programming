@@ -14,35 +14,16 @@
 char *_strpbrk(char *s, char *accept)
 {
 	int i, j;
-	int same_caracter;
-	int point = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		same_caracter = 0;
-
 		for (j = 0; accept[j] != '\0'; j++)
 		{
 			if (s[i] == accept[j])
 			{
-				same_caracter = 1;
-				position = i;
-				break;
-			}
-			else
-			{
-				same_caracter = 0;
-				break;
+				return (&s[i]);
 			}
 		}
 	}
-	if (same_caracter == 1)
-	{
-		return (s[i]);
-	}
-
-	if (position == 0)
-	{
-		return (NULL);
-	}
+	return (NULL);
 }
