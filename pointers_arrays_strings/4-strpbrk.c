@@ -1,19 +1,21 @@
 #include "main.h"
+#include <stdio.h>
 
 
 /**
  * *_strpbrk - searches a string for any of a set of bytes.
  * @s: string to be scanned
  * @accept:  string containing the characters to match
- * Return: It returns a pointer to the character in s that 
+ * Return: It returns a pointer to the character in s that
  *          matches one of the characters in accept, else returns NULL.
  */
 
 
 char *_strpbrk(char *s, char *accept)
 {
-	int i,j;
+	int i, j;
 	int same_caracter;
+	int point = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -24,6 +26,7 @@ char *_strpbrk(char *s, char *accept)
 			if (s[i] == accept[j])
 			{
 				same_caracter = 1;
+				position = i;
 				break;
 			}
 			else
@@ -32,6 +35,14 @@ char *_strpbrk(char *s, char *accept)
 				break;
 			}
 		}
+	}
+	if (same_caracter == 1)
+	{
 		return (s[i]);
+	}
+
+	if (position == 0)
+	{
+		return (NULL);
 	}
 }
