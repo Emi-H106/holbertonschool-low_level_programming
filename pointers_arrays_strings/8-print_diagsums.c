@@ -6,7 +6,7 @@
 /**
  * print_diagsums - prints the sum of the two diagonals of
  * a square matrix of integers
- * @a: array
+ * @a: Multidimensional Array
  * @size: the number of elements in an array
  * Return: void
  */
@@ -14,19 +14,14 @@
 
 void print_diagsums(int *a, int size)
 {
-	int i, j;
-	int sum = 0;
-
+	int i;
+	int sum1 = 0;
+	int sum2 = 1;
 
 	for (i = 0; i < size; i++)
 	{
-		for (j = 0; j < size; j++)
-		{
-			if (i == j)
-			{
-				sum = sum + a[i][j];
-			}
-		}
-		printf("%d", sum);
+		sum1 += a[(i * size) + i];
+		sum2 += += a[(i * size) + (size - 1 - i)];
 	}
+	printf("%d,", " %d'\n'");
 }
