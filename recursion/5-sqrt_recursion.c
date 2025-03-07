@@ -1,19 +1,11 @@
 #include "main.h"
 
 /**
- * _sqrt_1 - returns the natural square root of a number
+ * _sqrt_1 - check the number from base number
  * @n: the number
- * @i: 
- * Return:
+ * @i: base number of check
+ * Return: the natural square root of a number
  */
-
-/**
- *_sqrt_recursion - returns the natural square root of a number
- * @n: the number
- * Return: returns the natural square root of a number
- */
-
-
 
 
 int _sqrt_1(int n, int i)
@@ -32,6 +24,12 @@ int _sqrt_1(int n, int i)
 		return (_sqrt_1(n + 1, i));
 	}
 }
+
+/**
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: the number
+ * Return: the natural square root of a number
+ */
 
 
 int _sqrt_recursion(int n)
