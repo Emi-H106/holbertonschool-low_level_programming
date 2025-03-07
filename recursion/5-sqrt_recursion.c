@@ -36,5 +36,5 @@ int _sqrt_1(int n, int i)
 
 int _sqrt_recursion(int n)
 {
-	return (_sqrt_1(1, n);
+	return (_sqrt_1(1, n));
 }
