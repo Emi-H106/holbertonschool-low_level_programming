@@ -19,11 +19,11 @@
 int _sqrt_1(int n, int i)
 {
 
-	if ((i * i) > n)
+	if ((n * n) > i)
 	{
 		return (-1);
 	}
-	else if ((i * i) == n)
+	else if ((n * n) == i)
 	{
 		return (n);
 	}
