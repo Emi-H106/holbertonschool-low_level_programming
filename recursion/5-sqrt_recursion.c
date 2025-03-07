@@ -29,7 +29,7 @@ int _sqrt_1(int n, int i)
 	}
 	else
 	{
-		return (_sqrt_1(n, i + 1));
+		return (_sqrt_1(n + 1, i));
 	}
 }
 
