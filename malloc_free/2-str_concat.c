@@ -24,12 +24,12 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	}
 
-	while (s[i])
+	while (s1[i])
 	{
 		i++;
 	}
 
-	while (s[j])
+	while (s2[j])
 	{
 		j++;
 	}
