@@ -6,7 +6,8 @@
  * *string_nconcat - concatenates two strings
  * @s1: string1
  * @s2: string2
- * @n: 
+ * @n: the maximum number of characters from s2
+ *     that should be concatenated to s1
  * Return: a pointer to a newly allocated space in memory
  */
 
