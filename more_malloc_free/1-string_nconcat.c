@@ -39,10 +39,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (result == NULL)
 		return (NULL);
 
+	for (k = 0; k < i; k++)
+		result[k] = s1[k]
+
 	for (k = 0; k < n; k++)
-	{
 		result[i + k] = s2[k];
-	}
 
 	result[i + n] = '\0';
 	return (result);
