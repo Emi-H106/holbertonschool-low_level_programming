@@ -40,6 +40,7 @@ void _strcpy(char *str, char *dst)
 	}
 
 	dst[i] = '\0';
+	return (dst);
 }
 
 /**
