@@ -29,7 +29,7 @@ int _strlen(char *s)
  * Return: void
  */
 
-char _strcpy(char *str, char *dst)
+void  _strcpy(char *str, char *dst)
 {
 	int i = 0;
 
@@ -40,7 +40,6 @@ char _strcpy(char *str, char *dst)
 	}
 
 	dst[i] = '\0';
-	return (dst);
 }
 
 /**
@@ -61,6 +60,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (new_dog == NULL)
 	{
+		free(new_dog);
 		return (NULL);
 	}
 
@@ -74,6 +74,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (new_dog->name == NULL)
 	{
+		free(new_dog->name);
 		free(new_dog);
 		return (NULL);
 	}
@@ -92,6 +93,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (new_dog->owner == NULL)
 	{
+		free(new_dog->owner);
 		free(new_dog->name);
 		free(new_dog);
 		return (NULL);
