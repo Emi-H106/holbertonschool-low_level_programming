@@ -29,7 +29,7 @@ int _strlen(char *s)
  * Return: void
  */
 
-void _strcpy(char *str, char *dst)
+char _strcpy(char *str, char *dst)
 {
 	int i = 0;
 
