@@ -31,13 +31,13 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	if ((argv[2] == '/' || argv[2] == '%') && num2 == 0)
+	if ((*argv[2] == '/' || *argv[2] == '%') && num2 == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
 
-	printf("%d\n", operator(num1, num2);
+	printf("%d\n", operator(num1, num2));
 
 	return (0);
 }	
