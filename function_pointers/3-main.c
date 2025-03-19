@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 
 	operator = get_op_func(argv[2]);
 
-	if (*argv[2] != '+' && *argv[2] != '-' && *argv[2] != '*' && *argv[2] != '/' && *argv[2] != '%')
+	if (operator == NULL || strlen(operator) != 1)
 	{
 		printf("Error\n");
 		exit(99);
