@@ -8,10 +8,10 @@ struct print - prints char,int,float,string
 @f: the function associated
 */
 
-typedf struct print
+typedef struct print
 {
 	char *type;
-	void f(va_list ap);
+	void (*f)(va_list ap);
 }print_type;
 
 int _putchar(char c);
