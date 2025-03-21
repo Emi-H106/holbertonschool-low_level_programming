@@ -67,7 +67,7 @@ void print_all(const char * const format, ...)
 		{"i", print_int},
 		{"f", print_float},
 		{"s", print_string},
-		{NULL, NULL}
+		{0, NULL}
 	};
 
 	va_list ap;
