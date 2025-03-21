@@ -26,7 +26,7 @@ void print_int(va_list ap)
 
 /**
  * print_float -  prints float
- * @ap: argument pointer 
+ * @ap: argument pointer
  * Return: void
  */
 
@@ -49,7 +49,7 @@ void print_string(va_list ap)
 	{
 		printf("(nil)");
 	}
-	printf("%s",s);
+	printf("%s", s);
 }
 
 
@@ -67,7 +67,7 @@ void print_all(const char * const format, ...)
 		{"i", print_int},
 		{"f", print_float},
 		{"s", print_string},
-		{NULL,NULL}
+		{NULL, NULL}
 	};
 
 	va_list ap;
@@ -80,14 +80,14 @@ void print_all(const char * const format, ...)
 	{
 		int j = 0;
 
-		while(types[j].type != NULL)
+		while (types[j].type != NULL)
 		{
 			if (*types[j].type == format[i])
 			{
 				printf("%s", separator);
 				types[j].f(ap);
 				separator = ", ";
-
+				break;
 			}
 			j++;
 		}
