@@ -45,9 +45,10 @@ void print_string(va_list ap)
 {
 	char *s = va_arg(ap, char *);
 
-	if (s != NULL)
+	if (!s)
 	{
 		printf("(nil)");
+		return;
 	}
 	printf("%s", s);
 }
@@ -67,7 +68,7 @@ void print_all(const char * const format, ...)
 		{"i", print_int},
 		{"f", print_float},
 		{"s", print_string},
-		{0, NULL}
+		{NULL, NULL}
 	};
 
 	va_list ap;
@@ -89,10 +90,10 @@ void print_all(const char * const format, ...)
 				separator = ", ";
 				break;
 			}
-			j++;
+			++j;
 		}
-		i++;
+		++i;
 	}
-	va_end(ap);
 	printf("\n");
+	va_end(ap);
 }
