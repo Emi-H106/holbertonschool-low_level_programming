@@ -73,12 +73,13 @@ void print_all(const char * const format, ...)
 	va_list ap;
 	char *separator = "";
 	int i = 0;
-	int j = 0;
 
 	va_start(ap, format);
 
 	while (format != NULL && format[i] != '\0')
 	{
+		int j = 0;
+
 		while(types[j].type != NULL)
 		{
 			if (*types[j].type == format[i])
@@ -86,10 +87,10 @@ void print_all(const char * const format, ...)
 				printf("%s", separator);
 				types[j].f(ap);
 				separator = ", ";
+
 			}
 			j++;
 		}
-		j = 0;
 		i++;
 	}
 	va_end(ap);
