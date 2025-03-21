@@ -45,11 +45,11 @@ void print_string(va_list ap)
 {
 	char *s = va_arg(ap, char *);
 
-	if (s != \0)
+	if (*s != '\0')
 	{
 		printf("(nill)");
 	}
-	printf("%s", s);
+	printf("%s",s);
 }
 
 
@@ -77,13 +77,13 @@ void print_all(const char * const format, ...)
 
 	va_start(ap, format);
 
-	while (format != NULL && format[i] != \0)
+	while (format != NULL && format[i] != '\0')
 	{
 		while(types[j].type != NULL)
 		{
-			if (types[j].type == format[i])
+			if (*types[j].type == format[i])
 			{
-				printf(%s, separator);
+				printf("%s", separator);
 				types[j].f(ap);
 				separator = ",";
 			}

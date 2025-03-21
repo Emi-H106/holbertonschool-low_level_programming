@@ -1,6 +1,8 @@
 #ifndef VARIADIC_FUNCTIONS_H
 #define VARIADIC_FUNCTIONS_H
 
+#include <stdarg.h>
+
 /*structure*/
 /*
 struct print - prints char,int,float,string
