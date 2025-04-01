@@ -28,8 +28,8 @@ size_t _strlen(const char *s)
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	lint_t *new_node;
-	*last = *head
+	list_t *new_node;
+	list_t *last = *head;
 
 	if (str == NULL)
 	{
@@ -62,8 +62,8 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	while (last->next != NULL)
 	{
-		*last = last->new_node;
+		last = last->next;
 	}
-	last->new_node = new_node;
+	last->next = new_node;
 	return (new_node);
 }
