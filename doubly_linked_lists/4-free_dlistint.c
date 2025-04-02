@@ -3,7 +3,7 @@
 
 
 /**
- * free_dllistint - frees a list_t list
+ * free_dlistint - frees a list_t list
  * @head: a pointer to a pointer  the first node of the list
  * Return: void
 */
