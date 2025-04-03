@@ -5,7 +5,7 @@
 
 /**
  * insert_dnodeint_at_index - inserts a new node at a given position.
- * @head: Pointer to the head of the list
+ * @h: Pointer to the head of the list
  * @idx: the index of the list where the new node should be added.
  *       Index starts at 0
  * @n: the data of dlistint_t list
@@ -42,6 +42,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 		while (temp != NULL && count < idx - 1)
 		{
+			if (count > idx - 1)
+			{
+				free(new_node);
+				return (NULL);
+			}
 			temp = temp->next;
 			count++;
 		}
