@@ -15,11 +15,7 @@
 
 void print_error(const char *message, const char *file_name, int code)
 {
-	if (file_name)
 	dprintf(STDERR_FILENO, message, file_name);
-	else
-	dprintf(STDERR_FILENO, "%s", message);
-
 	exit(code);
 }
 
@@ -47,14 +43,14 @@ int main(int argc, char *argv[])
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 
 	if (fd_to == -1)
-		print_error("Error: Can't write to file %s\n", argv[2], 99);
+		print_error("Error: Can't write to %s\n", argv[2], 99);
 
 	while ((bytes_read = read(fd_from, buffer, sizeof(buffer))) > 0)
 	{
 		bytes_written = write(fd_to, buffer, bytes_read);
 
 		if (bytes_written != bytes_read)
-			print_error("Error: Can't write to file %s\n", argv[2], 99);
+			print_error("Error: Can't write to %s\n", argv[2], 99);
 	}
 
 	if (bytes_read == -1)
