@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 	if (fd_from == -1)
 		print_error("Error: Can't read from file %s\n", argv[1], 98);
 
-	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 
 	if (fd_to == -1)
 		print_error("Error: Can't write to file %s\n", argv[2], 99);
@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 
 	if (close(fd_from) == -1)
 	{
-		dprintf(STDERR_FILENO, "Eirror: Can't close fd %d\n", fd_from);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
 		exit(100);
 	}
 	if (close(fd_to) == -1)
@@ -66,5 +66,4 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to);
 		exit(100);
 	}
-	return (0);
-}
+	return (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH}
