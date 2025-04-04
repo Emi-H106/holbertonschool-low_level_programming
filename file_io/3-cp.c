@@ -22,13 +22,13 @@ void print_error(const char *message, const char *file_name, int code)
 /**
  * main - copies the content of a file to another file
  * @argc: number of arguments
- * @argv: rray of arguments
+ * @argv: array of arguments
  * Return: Always 0.
  */
 
 int main(int argc, char *argv[])
 {
-	int fd_from, fd_to;
+	int fd_from = 0, fd_to = 0;
 	char buffer[1024];
 	ssize_t bytes_read, bytes_written;
 
