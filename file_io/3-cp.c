@@ -15,7 +15,11 @@
 
 void print_error(const char *message, const char *file_name, int code)
 {
-	dprintf(2, message, file_name);
+	if (file_name)
+	dprintf(STDERR_FILENO, message, file_name);
+	else
+	dprintf(STDERR_FILENO, "%s", message);
+
 	exit(code);
 }
 
