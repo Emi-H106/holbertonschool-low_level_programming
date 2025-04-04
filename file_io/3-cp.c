@@ -66,4 +66,5 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to);
 		exit(100);
 	}
-	return (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH}
+	return (0);
+}
